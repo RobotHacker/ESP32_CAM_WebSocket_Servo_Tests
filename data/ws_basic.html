@@ -1,0 +1,37 @@
+<html>
+<head>
+  <script>
+    var Socket;
+    function init() {
+      Socket = new WebSocket('ws://' + window.location.hostname + ':81/');
+      Socket.onmessage = function(event){
+        document.getElementById("rxConsole").value += event.data;
+      }
+    }
+    function sendText(){
+      Socket.send(document.getElementById("txBar").value);
+      document.getElementById("txBar").value = "";
+    }
+    function sendServo(id,value){
+      Socket.send(id+"="+value);
+    }    
+  </script>
+</head>
+<body onload="init()">
+  <div>
+    <textarea id="rxConsole"></textarea>
+  </div>
+  <hr/>
+  <div>
+    <input type="text" id="txBar" onkeydown="if(event.keyCode == 13) sendText();" />
+  </div>
+  <hr/>
+  <div>0<input type="range" min="0" max="180" value="90" id="S0" oninput="sendServo(this.id,this.value)" /></div>  
+  <hr/>
+  <div>1<input type="range" min="0" max="180" value="90" id="S1" oninput="sendServo(this.id,this.value)" /></div>  
+  <hr/>
+  <div>2<input type="range" min="0" max="180" value="90" id="S2" oninput="sendServo(this.id,this.value)" /></div>  
+  <hr/>
+  <div>3<input type="range" min="0" max="180" value="90" id="S3" oninput="sendServo(this.id,this.value)" /></div>  
+</body>
+</html>
