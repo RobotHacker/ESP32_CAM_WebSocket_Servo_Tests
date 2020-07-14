@@ -400,7 +400,7 @@ function wc_onclick()
 {
 	if(ws == null)
 	{
-		ws = new WebSocket("ws://" + window.location.hostname + "/remote_arm", "text.phpoc");
+		ws = new WebSocket('ws://' + window.location.hostname + ':81/');
 		document.getElementById("ws_state").innerHTML = "CONNECTING";
 
 		ws.onopen = ws_onopen;
