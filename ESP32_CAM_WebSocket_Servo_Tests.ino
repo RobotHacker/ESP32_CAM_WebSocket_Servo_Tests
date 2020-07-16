@@ -226,6 +226,8 @@ void handleFileList() {
     output += (isDir) ? "dir" : "file";
     output += "\",\"name\":\"";
     output += String(entry.name()).substring(1);
+    output += "\",\"size\":\"";
+    output += String(entry.size());
     output += "\"}";
     entry.close();
   }
@@ -240,6 +242,8 @@ void handleFileList() {
       output += (file.isDirectory()) ? "dir" : "file";
       output += "\",\"name\":\"";
       output += String(file.name()).substring(1);
+      output += "\",\"size\":\"";
+      output += String(file.size());
       output += "\"}";
       file = root.openNextFile();
     }
