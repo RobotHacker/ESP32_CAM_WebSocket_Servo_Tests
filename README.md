@@ -10,7 +10,7 @@ Test/example code for the ESP32-CAM to run servos via a PCA9685 servo driver ove
   - Allows driving 16 servos (expandable to more) with 2 pins (I2C).
 - Added/modified HTML joysticks from [here](https://github.com/stemkoski/HTML-Joysticks).
   - Multiple touchscreen joysticks without extra fluff.
-- Added/modified [reverse kinematic example](https://www.instructables.com/id/Arduino-Control-Robot-Arm-Via-Web/).
+- Added/modified [inverse kinematics example](https://www.instructables.com/id/Arduino-Control-Robot-Arm-Via-Web/).
   - Looks like a good way to control a robot arm via web page.
 - Added/modified [Gamepad API example](https://github.com/luser/gamepadtest).
   - Grab a joystick or game pad and control your robot.
