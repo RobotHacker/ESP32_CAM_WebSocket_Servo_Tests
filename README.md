@@ -9,18 +9,18 @@ Test/example code for the ESP32-CAM to run servos via a PCA9685 servo driver ove
 - Added/modified [servo driver code](https://github.com/adafruit/Adafruit-PWM-Servo-Driver-Library/blob/master/examples/servo/servo.ino).
   - Allows driving 16 servos (expandable to more) with 2 pins (I2C).
 - Added/modified HTML joysticks from [here](https://github.com/stemkoski/HTML-Joysticks).
-  - Multiple touchscreen joysticks without extra fluff.
+  - Example webpage with 4 touchscreen joysticks without extra fluff.  Each joystick controls 2 servos
 - Added/modified [inverse kinematics example](https://www.instructables.com/id/Arduino-Control-Robot-Arm-Via-Web/).
-  - Looks like a good way to control a robot arm via web page.
+  - Example webpage with SVG arm picture to position arm.  Looks like a good way to control a robot arm via web page.
 - Added/modified [Gamepad API example](https://github.com/luser/gamepadtest).
-  - Grab a joystick or game pad and control your robot.
+  - Example webpage that uses browser's Gamepad API to get joystick data.  Grab a joystick or game pad and control your robot.
 
 # To Do:
 - Add camera stream/capture.
 - Add camera tracking features.
 - Store joystick configuration.
-- Add error handling to both ESP32 side and javascrpit side.
-- Add socket closing/opening handling to both ESP32 side and javascrpit side.
+- Add error handling to both ESP32 side and javascript side.
+- Add socket closing/opening handling to both ESP32 side and javascript side.
 
 # Hardware set up
 - ESP32-CAM board
